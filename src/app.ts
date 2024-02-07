@@ -9,7 +9,10 @@ const app = express();
 
 app.use(express.json());
 app.use(
-  cors({ credentials: true, origin: "https://silly-teal-crab.cyclic.app" }),
+  cors({
+    credentials: true,
+    origin: ["https://booktook.netlify.app/sells"],
+  }),
 );
 
 app.use("/api/v1", APIv1Routes);
