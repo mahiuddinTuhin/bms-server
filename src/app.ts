@@ -10,8 +10,8 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
+    origin: ["https://booktook.netlify.app"],
     credentials: true,
-    origin: "*",
   }),
 );
 
