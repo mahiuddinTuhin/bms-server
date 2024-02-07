@@ -12,6 +12,12 @@ app.use(cors({ credentials: true, origin: "http://localhost:5173" }));
 
 app.use("/api/v1", APIv1Routes);
 
+app.all("/", (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: `Server is running!`,
+  });
+});
 app.all("*", (req, res) => {
   res.status(404).json({
     success: false,
