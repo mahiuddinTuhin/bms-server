@@ -8,7 +8,9 @@ import APIv1Routes from "./app/routes";
 const app = express();
 
 app.use(express.json());
-app.use(cors({ credentials: true, origin: "http://localhost:5173" }));
+app.use(
+  cors({ credentials: true, origin: "https://silly-teal-crab.cyclic.app" }),
+);
 
 app.use("/api/v1", APIv1Routes);
 
