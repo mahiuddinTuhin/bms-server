@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(
   cors({
     credentials: true,
-    origin: ["https://booktook.netlify.app/sells"],
+    origin: ["https://booktook.netlify.app"],
   }),
 );
 
